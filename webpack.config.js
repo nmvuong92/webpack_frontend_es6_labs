@@ -3,7 +3,7 @@ var webpack = require('webpack');
 module.exports = {
     entry: './src/index.js',
     output: {
-        path: path.resolve(__dirname,'dist'),
+        path: path.resolve(__dirname,'public'),
         filename: 'bundle.js'
     },
     module: {
@@ -16,5 +16,12 @@ module.exports = {
             }
           }
         ]
-      }
+    },
+    devServer: {
+        inline:true,
+        port: 8008,
+        historyApiFallback: {
+            index: 'public/index.html'
+        }
+    },
 }
