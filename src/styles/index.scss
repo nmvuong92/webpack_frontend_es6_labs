@@ -1,0 +1,31 @@
+@import './base/reset';
+@import 'colors';
+@import './global/mixins';
+@import 'old.css';
+@import 'components';
+$theme-font:    verdana, sans-serif;
+
+body {
+  font: $theme-font;
+  background-color: $themeColor-Light;
+  h1, h2 {
+      color: $themeColor-Dark
+  }
+}
+.container{
+   display: flex;
+   flex-direction: row;
+   background-color: yellow;
+   flex-wrap: wrap;
+   @include mobile{
+    flex-direction: column;
+   }
+   .item{
+     background-color: red;
+     flex-grow: 1;
+     border: 1px green solid;
+     @include mobile{
+       color:pink;
+     }
+   }
+}

@@ -1,0 +1,27 @@
+|- assets/css/scss/
+|  |- global/ ____________________________ # Functions, mixins, placeholders, and variables
+|  |- base/
+|    |- reset, normalize, or sanitize
+|    |- typography
+|    |- icons
+|    |- wordpress ________________________ # Partial for WordPress default classes
+|  |- components/
+|    |- buttons
+|    |- callouts
+|    |- toggles
+|    |- all other modular reusable UI components
+|  |- layout/
+|    |- header
+|    |- footer
+|    |- sidebar
+|  |- templates/
+|    |- home page
+|    |- single
+|    |- archives
+|    |- blog
+|    |- all page, post, and custom post type specific styles
+|  |- admin/ _____________________________ # Admin specific partials
+|  |- editor/ ____________________________ # Editor specific partials (leverage placeholders to use in front-end and admin area)
+|  |- admin.scss
+|  |- project.scss
+|  |- editor-styles.scss

@@ -1,0 +1,39 @@
+%message {
+    padding: .5em;
+    margin-bottom: .5em;
+    border-radius: .15em;
+    border: 1px solid;
+  }
+/*@mixin message($color) {
+    @extend %message;
+    color: $color;
+    border-color: lighten($color, 20%);
+    background: lighten($color, 40%);
+}*/
+/*Gracefully handling errors*/
+@mixin message($color) {
+    @if type-of($color) == color {
+      @extend %message;
+      color: $color;
+      border-color: lighten($color, 20%);
+      background: lighten($color, 40%);
+    }
+  
+    @else {
+      @warn "#{$color} is not a color for `message`.";
+    }
+}
+/*maping in sass*/
+$message-types: (
+  error   :  #b94a48,
+  valid   :  #468847,
+  warning :  #c09853,
+  info    :  #3a87ad
+) !default;
+
+@each $type, $color in $message-types {
+  .message-#{$type} {
+    @include message($color);
+  }
+}
+
