@@ -21,7 +21,7 @@ body {
     flex-direction: column;
    }
    .item{
-     background-color: red;
+     background-color: blue;
      flex-grow: 1;
      border: 1px green solid;
      @include mobile{
